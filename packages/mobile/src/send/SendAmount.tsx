@@ -124,7 +124,7 @@ export class SendAmount extends React.PureComponent<Props, State> {
   }
 
   calculateFee = () => {
-    if (this.amountGreatherThanBalance()) {
+    if (this.amountGreaterThanBalance()) {
       // No need to update fee as the user doesn't have enough anyways
       return
     }
@@ -154,7 +154,7 @@ export class SendAmount extends React.PureComponent<Props, State> {
     this.props.hideAlert()
   }
 
-  amountGreatherThanBalance = () => {
+  amountGreaterThanBalance = () => {
     return parseInputAmount(this.state.amount).isGreaterThan(this.props.dollarBalance || 0)
   }
 
