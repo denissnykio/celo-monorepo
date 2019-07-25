@@ -13,7 +13,6 @@ import {
   ActivityIndicator,
   StyleSheet,
   Text,
-  TextInput,
   TextStyle,
   TouchableWithoutFeedback,
   View,
@@ -98,13 +97,11 @@ export class SendAmount extends React.PureComponent<Props, State> {
     characterLimitExceeded: false,
   }
 
-  amountInput: React.RefObject<TextInput>
   timeout: number | null = null
   calculateFeeDebounced: (() => void)
 
   constructor(props: Props) {
     super(props)
-    this.amountInput = React.createRef<TextInput>()
     this.calculateFeeDebounced = debounce(this.calculateFee, INPUT_DEBOUNCE_TIME)
   }
 
@@ -186,6 +183,7 @@ export class SendAmount extends React.PureComponent<Props, State> {
   }
 
   onAmountChanged = (amount: string) => {
+    this.props.hideAlert()
     this.setState({ amount })
     this.calculateFeeDebounced()
   }
@@ -318,14 +316,13 @@ export class SendAmount extends React.PureComponent<Props, State> {
     this.props.fetchPhoneAddresses([recipient.e164PhoneNumber])
   }
 
-  focusAmountField = () => {
-    if (this.amountInput.current) {
-      this.amountInput.current.focus()
-    }
-  }
-
   renderBottomContainer = (amountIsValid: boolean, userHasEnough: boolean) => {
-    const onPress = () => this.focusAmountField()
+    const onPress = () => {
+      if (!amountIsValid) {
+        this.props.showError(ErrorMessages.INVALID_AMOUNT, ERROR_BANNER_DURATION)
+        return
+      }
+    }
 
     if (!amountIsValid) {
       return (
@@ -369,7 +366,6 @@ export class SendAmount extends React.PureComponent<Props, State> {
             </Text>
           )}
           <LabeledTextInput
-            ref={this.amountInput}
             keyboardType="numeric"
             title={'$'}
             placeholder={t('amount')}
