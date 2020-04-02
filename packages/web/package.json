@@ -47,7 +47,7 @@
     "mobile-detect": "^1.4.2",
     "net": "^1.0.2",
     "next": "^8.0.3",
-    "next-i18next": "^0.36.5",
+    "next-i18next": "^0.54.0",
     "next-images": "^1.1.1",
     "next-plugin-transpile-modules": "^2.0.0",
     "nuka-carousel": "git://github.com/cmcewen/nuka-carousel#fee86bf",
