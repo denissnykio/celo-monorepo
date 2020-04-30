@@ -16,7 +16,9 @@
     "lint-checks": "yarn run lint && yarn build --noEmit",
     "start": "node ./dist/index.js",
     "start:local": "npm run build; cp config/config.local.env .env; node --inspect ./dist/index.js",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async-polling": "^0.2.1",
@@ -29,7 +31,8 @@
     "typescript": "^3.3.3",
     "utf8": "^3.0.0",
     "web3-eth-abi": "1.0.0-beta.37",
-    "web3-utils": "1.0.0-beta.37"
+    "web3-utils": "1.0.0-beta.37",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@google-cloud/nodejs-repo-tools": "^2.3.3",
@@ -40,5 +43,6 @@
     "@types/node-fetch": "^2.1.2",
     "@types/utf8": "^2.1.6",
     "@types/web3": "^1.0.18"
-  }
+  },
+  "snyk": true
 }
