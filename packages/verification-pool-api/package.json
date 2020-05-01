@@ -20,7 +20,9 @@
     "lint": "tslint -c tslint.json --project tsconfig.json",
     "compile-typescript": "tsc",
     "test": "jest --ci --coverage --runInBand --detectOpenHandles",
-    "test:verbose": "jest --ci --verbose --runInBand --detectOpenHandles"
+    "test:verbose": "jest --ci --verbose --runInBand --detectOpenHandles",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bignumber.js": "^7.2.0",
@@ -35,7 +37,8 @@
     "twilio": "^3.23.2",
     "web3": "1.0.0-beta.37",
     "web3-core-helpers": "1.0.0-beta.37",
-    "web3-utils": "^1.0.0-beta.37"
+    "web3-utils": "^1.0.0-beta.37",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/express": "^4.16.1",
@@ -56,5 +59,6 @@
   },
   "engines": {
     "node": "8"
-  }
+  },
+  "snyk": true
 }
