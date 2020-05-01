@@ -12,7 +12,9 @@
     "prettify": "yarn run prettier --config ../../.prettierrc.js --write '{contracts,types,lib}/**/*.+(ts|tsx|js|jsx)'",
     "build": "tsc",
     "test": "npm run pretest && jest --ci --silent --coverage --runInBand",
-    "test:verbose": "npm run pretest && jest --ci --verbose --runInBand"
+    "test:verbose": "npm run pretest && jest --ci --verbose --runInBand",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@umpirsky/country-list": "https://github.com/umpirsky/country-list#05fda51",
@@ -24,7 +26,8 @@
     "futoin-hkdf": "^1.0.3",
     "google-libphonenumber": "^3.2.1",
     "lodash": "^4.17.14",
-    "web3-utils": "1.0.0-beta.37"
+    "web3-utils": "1.0.0-beta.37",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@celo/typescript": "0.0.1",
@@ -50,5 +53,6 @@
       "jsx",
       "node"
     ]
-  }
+  },
+  "snyk": true
 }
