@@ -1,0 +1,76 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - j6 > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solhint > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-artifactor > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - twilio > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - ethereumjs-vm > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > inquirer > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solhint > eslint > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > eslint > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-artifactor > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-resolver > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - ethereumjs-vm > async-eventemitter > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - ethereumjs-vm > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solhint > eslint > inquirer > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > eslint > inquirer > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solhint > eslint > table > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > eslint > table > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > @truffle/compile-vyper > eslint > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > @truffle/compile-vyper > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solidity-bytes-utils > truffle-hdwallet-provider > web3-provider-engine > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-vm > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > @truffle/compile-vyper > eslint > inquirer > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > @truffle/compile-vyper > eslint > table > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-vm > async-eventemitter > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-vm > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solidity-bytes-utils > truffle-hdwallet-provider > web3-provider-engine > ethereumjs-vm > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solidity-bytes-utils > truffle-hdwallet-provider > web3-provider-engine > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-vm > ethereumjs-blockchain > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > @truffle/compile-vyper > @truffle/compile-solidity > request-promise > request-promise-core > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solidity-bytes-utils > truffle-hdwallet-provider > web3-provider-engine > ethereumjs-vm > async-eventemitter > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - solidity-bytes-utils > truffle-hdwallet-provider > web3-provider-engine > ethereumjs-vm > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
+    - truffle-security > remix-lib > ethereumjs-vm > ethereumjs-blockchain > ethereumjs-block > async > lodash:
+        patched: '2020-05-01T00:31:43.075Z'
