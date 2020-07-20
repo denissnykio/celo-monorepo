@@ -36,7 +36,7 @@
     "bignumber.js": "^7.2.0",
     "date-fns": "^2.0.0-alpha.27",
     "graphql": "^14.1.1",
-    "i18next": "^12.1.0",
+    "i18next": "^19.6.0",
     "react": "16.8.3",
     "react-apollo": "^2.4.1",
     "react-i18next": "^8.3.8",
